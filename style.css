@@ -25,18 +25,18 @@
 h1 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: calc(24px + 16 * (100vw / 1280));
+    font-size: calc(30px + 10 * (100vw / 1280));
 }
 
-@media (min-width: 767px){
+/*@media (min-width: 767px){
     h1 {
      font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
     }
-   }
+   }*/
 
 p {
     font-size: calc(10px + 6 * (100vw / 1280));
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 
 .header > p {
@@ -61,7 +61,7 @@ p {
 }
 
 h2 {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     margin: 0;
     font-size: calc(19px + 5 * (100vw / 1280));
     text-decoration: underline;
@@ -86,15 +86,15 @@ a:hover {
     border-radius: 10px;
     padding: 20px;
     padding-left: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .html > p, .css > p, .java > p, progress {
     display: inline;
 }
 
-/*@media (min-width: 767px){
-    .html > p, .css > p, .java > p, progress {
+/*@media (max-width: 400px) {
+    .html > p, .css > p, .java > p {
         display: block;
     }
    }*/
@@ -115,7 +115,7 @@ a:hover {
     padding-right: 300px;
 }
 
-.html, .css {
+.html, .css, .java {
     margin-bottom: 20px;
 }
 
@@ -125,7 +125,7 @@ a:hover {
 
 .form-group label {
     display: block; 
-    font-size: calc(12px + 4 * (100vw / 1280));
+    font-size: calc(10px + 6 * (100vw / 1280));
 }
 
 .form-group input,
