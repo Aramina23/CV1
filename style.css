@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .wrapper {
     margin: 0 auto;
-    color: #414347;
+    color: #ecf0f2;
     background-color: rgb(235, 242, 249);
-    border: 1px solid rgb(235, 242, 249);
     max-width: 1280px;
-    font: normal 16px 'Roboto', sans-serif;
 }
 
 * {
@@ -19,27 +16,15 @@
     }
 
 .header {
-    background:linear-gradient(45deg, rgb(149, 243, 221), rgb(206, 235, 240));
+    margin: 10px auto;
     border-radius: 10px;
     padding: 10px 40px;
     margin-bottom: 10px;
-    border: 2px solid rgb(13, 156, 188);
 }
-
-.block {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 767px) {
-    .block {
-        display: block;
-        }
-    }
 
 h1 {
-    margin-left: 30px;
-    align-self: center;
+    text-align: center;
+    margin-bottom: 30px;
     font-size: calc(24px + 16 * (100vw / 1280));
 }
 
@@ -50,35 +35,43 @@ h1 {
    }
 
 p {
-    font-size: calc(12px + 4 * (100vw / 1280));
+    font-size: calc(10px + 6 * (100vw / 1280));
     padding-bottom: 5px;
 }
 
-@media (min-width: 767px){
+.header > p {
+    text-align: center;
+    line-height: normal;
+}
+
+/*@media (min-width: 767px){
     p {
      font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
      text-align: justify;
     }
-   }
+   }*/
 
 .photo {
-    width: 170px;
-    height: 170px;
-    border: 5px solid rgb(13, 156, 188);
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 7px solid rgb(3, 56, 146);
+    border-radius: 40px 40px 0 0;
+    margin: 0 auto 30px;
+    display: block;
 }
 
 h2 {
     padding-bottom: 20px;
     margin: 0;
-    font-size: calc(17px + 7 * (100vw / 1280));
+    font-size: calc(19px + 5 * (100vw / 1280));
+    text-decoration: underline;
 }
 
-@media (min-width: 767px){
+/*@media (min-width: 767px){
     h2 {
      font-size: calc(17px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
     }
-   }
+   }*/
 
 a {
     margin-right: 20px;
@@ -89,43 +82,50 @@ a:hover {
 }
     
 .bg {
-    background:linear-gradient(45deg, rgb(149, 243, 221), rgb(206, 235, 240));
+    background:linear-gradient(-45deg, rgb(3, 56, 146), rgb(151, 180, 224));
     border-radius: 10px;
     padding: 20px;
     padding-left: 40px;
     margin-bottom: 10px;
-    border: 2px solid rgb(13, 156, 188);
 }
 
-.list {
-    padding-left: 15px;
-    list-style: square;
-    font-size: calc(12px + 4 * (100vw / 1280));
+.html > p, .css > p, .java > p, progress {
+    display: inline;
 }
 
-.list li {
-    padding-bottom: 5px;
-    
+/*@media (min-width: 767px){
+    .html > p, .css > p, .java > p, progress {
+        display: block;
+    }
+   }*/
+
+.html > p {
+    margin-right: 56px;
 }
 
-.table {
-    width: 100%;
-    font-size: calc(12px + 4 * (100vw / 1280));
+.css > p {
+    margin-right: 75px;
 }
 
-.table tr {
-    border-bottom: 3px solid #ccc;
+.java > p {
+    margin-right: 33px;
 }
 
-.table td {
-    padding-bottom: 15px;
-    padding-top: 10px;
-    font-size: 16px;
+.progress {
+    padding-right: 300px;
+}
+
+.html, .css {
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 20px;
 }
 
 .form-group label {
-    display: block;
-    
+    display: block; 
+    font-size: calc(12px + 4 * (100vw / 1280));
 }
 
 .form-group input,
@@ -141,6 +141,7 @@ a:hover {
 .row {
     display: flex;
     margin-bottom: 20px;
+    font-size: calc(12px + 4 * (100vw / 1280)); 
 }
 
 .row > .form-group {
@@ -153,7 +154,7 @@ a:hover {
 }
 
 .btn {
-    background: rgb(61, 206, 238);
+    background: rgb(192, 215, 234);
     padding: 15px 20px;
     border-radius: 10px;
     font-size: calc(12px + 4 * (100vw / 1280));
@@ -164,5 +165,5 @@ a:hover {
 }
 
 .btn:hover {
- background-color: rgb(13, 156, 188);   
+ background-color: rgb(132, 187, 231);   
 }
