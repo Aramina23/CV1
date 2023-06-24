@@ -4,9 +4,9 @@
     margin: 0 auto;
     color: #414347;
     background-color: rgb(235, 242, 249);
-    font: normal 16px 'Roboto', sans-serif;
     border: 1px solid rgb(235, 242, 249);
-    max-width: 750px;
+    max-width: 1280px;
+    font: normal 16px 'Roboto', sans-serif;
 }
 
 * {
@@ -14,7 +14,7 @@
 }
 
 .container {
-    max-width: 700px;
+    max-width: 900px;
     margin: 20px auto 20px;
     }
 
@@ -30,22 +30,29 @@
     margin-bottom: 20px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .block {
         display: block;
         }
     }
 
-h1 {
+.block h1 {
     margin-left: 30px;
     align-self: center;
     font-size: 40px;
 }
 
 p {
-    font-size: 17px;
+    font-size: calc(12px + 4 * (100vw / 1280));
     padding-bottom: 5px;
 }
+
+@media (min-width: 767px){
+    p {
+     font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+     text-align: justify;
+    }
+   }
 
 .photo {
     width: 170px;
@@ -57,7 +64,14 @@ p {
 h2 {
     padding-bottom: 20px;
     margin: 0;
+    font-size: calc(17px + 7 * (100vw / 1280));
 }
+
+@media (min-width: 767px){
+    h2 {
+     font-size: calc(17px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
+    }
+   }
 
 a {
     margin-right: 20px;
@@ -78,24 +92,32 @@ a:hover {
 .list {
     padding-left: 15px;
     list-style: square;
+    font-size: calc(12px + 4 * (100vw / 1280));
 }
 
 .list li {
     padding-bottom: 5px;
-    font-size: 17px;
+    
 }
 
 .table {
     width: 100%;
+    font-size: calc(12px + 4 * (100vw / 1280));
+}
+
+.table tr {
+    border-bottom: 3px solid #ccc;
 }
 
 .table td {
     padding-bottom: 15px;
+    padding-top: 10px;
+    font-size: 16px;
 }
 
 .form-group label {
     display: block;
-    font-size: 17px;
+    
 }
 
 .form-group input,
@@ -106,6 +128,7 @@ a:hover {
     border-bottom: 1px solid #ccc;
     padding: 15px 0 10px;
     outline: none;
+    font-size: calc(12px + 4 * (100vw / 1280));
 }
 .row {
     display: flex;
@@ -125,7 +148,7 @@ a:hover {
     background: rgb(61, 206, 238);
     padding: 15px 20px;
     border-radius: 10px;
-    font-size: 17px;
+    font-size: calc(12px + 4 * (100vw / 1280));
     border: none;
     cursor: pointer;
     margin-top: 15px;
