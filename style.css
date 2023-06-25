@@ -3,7 +3,6 @@
     margin: 0 auto;
     color: #ecf0f2;
     background-color: rgb(235, 242, 249);
-    max-width: 1280px;
 }
 
 * {
@@ -11,7 +10,7 @@
 }
 
 .container {
-    max-width: 900px;
+    /*max-width: 1280px;*/
     margin: 20px auto 20px;
     }
 
@@ -23,59 +22,83 @@
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
+    /*text-align: center;*/
+    margin-bottom: 20px;
+    margin-top: 0;
     font-size: calc(30px + 10 * (100vw / 1280));
 }
 
-/*@media (min-width: 767px){
+@media screen and (max-width: 767px){
     h1 {
-     font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
-    }
-   }*/
+     font-size: calc(30px + (10 + 10 * 0.7) * ((100vw - 320px) / 1280));
+     text-align: center;
+} 
+   }
 
 p {
-    font-size: calc(10px + 6 * (100vw / 1280));
+    font-size: calc(16px + 6 * (100vw / 1280));
     padding-bottom: 15px;
 }
 
+@media screen and (max-width: 767px) {
+    p {
+     font-size: calc(16px + (6 + 6 * 0.7) * ((100vw - 320px) / 1280));
+    }
+   }
+
 .header > p {
-    text-align: center;
+    /*text-align: center;*/
     line-height: normal;
 }
 
-/*@media (min-width: 767px){
-    p {
-     font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
-     text-align: justify;
+@media screen and (max-width: 767px) {
+    .header > p {
+     font-size: calc(16px + (6 + 6 * 0.7) * ((100vw - 320px) / 1280));
+     text-align: center;
     }
-   }*/
+   }
 
 .photo {
     width: 200px;
     height: 200px;
     border: 7px solid rgb(3, 56, 146);
     border-radius: 40px 40px 0 0;
-    margin: 0 auto 30px;
-    display: block;
+    margin-bottom: 10px;
+    /*margin: 0 auto 30px;
+    display: block;*/
 }
+
+@media screen and (max-width: 767px) {
+    .photo {
+        width: 150px;
+        height: 150px;
+     display: block;
+     margin: 0 auto 10px;
+    }
+   }
 
 h2 {
     padding-bottom: 40px;
     margin: 0;
-    font-size: calc(19px + 5 * (100vw / 1280));
+    font-size: calc(19px + 7 * (100vw / 1280));
     text-decoration: underline;
 }
 
-/*@media (min-width: 767px){
+@media screen and (max-width: 767px){
     h2 {
-     font-size: calc(17px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
+     font-size: calc(19px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
     }
-   }*/
+   }
 
 a {
     margin-right: 20px;
 }
+
+@media screen and (max-width: 767px){
+    a {
+     margin: auto;
+    }
+   }
 
 a:hover {
     opacity: 0.7;
@@ -84,27 +107,20 @@ a:hover {
 .bg {
     background:linear-gradient(-45deg, rgb(3, 56, 146), rgb(151, 180, 224));
     border-radius: 10px;
-    padding: 20px;
-    padding-left: 40px;
+    padding: 30px;
+    /*padding-left: 40px;*/
     margin-bottom: 30px;
 }
 
 .html > p, .css > p, .java > p, progress {
     display: inline;
 }
-
-/*@media (max-width: 400px) {
-    .html > p, .css > p, .java > p {
-        display: block;
-    }
-   }*/
-
 .html > p {
-    margin-right: 56px;
+    margin-right: 65px;
 }
 
 .css > p {
-    margin-right: 75px;
+    margin-right: 88px;
 }
 
 .java > p {
@@ -114,6 +130,26 @@ a:hover {
 .progress {
     padding-right: 300px;
 }
+
+@media screen and (max-width: 767px){
+    .progress {
+    padding-right: 0;
+    }
+    .html > p, .css > p, .java > p, progress {
+        display: block;
+    }
+        .html > p {
+            margin-right: 0;
+        }
+        
+        .css > p {
+            margin-right: 0;
+        }
+        
+        .java > p {
+            margin-right: 0;
+        }  
+   }
 
 .html, .css, .java {
     margin-bottom: 20px;
@@ -125,8 +161,15 @@ a:hover {
 
 .form-group label {
     display: block; 
-    font-size: calc(10px + 6 * (100vw / 1280));
+    font-size: calc(16px + 6 * (100vw / 1280));
 }
+
+@media screen and (max-width: 767px) {
+    .form-group label {
+     font-size: calc(16px + (6 + 6 * 0.7) * ((100vw - 320px) / 1280));
+    }
+   }
+
 
 .form-group input,
 .form-group textarea {
@@ -136,12 +179,18 @@ a:hover {
     border-bottom: 1px solid #ccc;
     padding: 15px 0 10px;
     outline: none;
-    font-size: calc(12px + 4 * (100vw / 1280));
+    font-size: calc(16px + 6 * (100vw / 1280));
 }
+@media screen and (max-width: 767px) {
+    .form-group input,
+    .form-group textarea {
+     font-size: calc(16px + (6 + 6 * 0.7) * ((100vw - 320px) / 1280));
+    }
+   }
+
 .row {
     display: flex;
     margin-bottom: 20px;
-    font-size: calc(12px + 4 * (100vw / 1280)); 
 }
 
 .row > .form-group {
@@ -157,12 +206,18 @@ a:hover {
     background: rgb(192, 215, 234);
     padding: 15px 20px;
     border-radius: 10px;
-    font-size: calc(12px + 4 * (100vw / 1280));
+    font-size: calc(13px + 6 * (100vw / 1280));
     border: none;
     cursor: pointer;
     margin-top: 15px;
     transition: background-color 1s linear;
 }
+
+@media screen and (max-width: 767px) {
+    .btn {
+     font-size: calc(13px + (6 + 6 * 0.7) * ((100vw - 320px) / 1280));
+    }
+   }
 
 .btn:hover {
  background-color: rgb(132, 187, 231);   
